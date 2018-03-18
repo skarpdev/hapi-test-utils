@@ -1,0 +1,9 @@
+{
+  "name": "hapi-test-utils",
+  "version": "0.0.1",
+  "description": "test utilities and helpers for testing hapijs code",
+  "main": "src/index.js",
+  "repository": "git@github.com:skarpdev/hapi-test-utils.git",
+  "author": "Nicklas Laine Overgaard <nicklas@skarp.dk>",
+  "license": "MIT"
+}
