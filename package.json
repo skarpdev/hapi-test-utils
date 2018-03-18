@@ -5,5 +5,19 @@
   "main": "src/index.js",
   "repository": "git@github.com:skarpdev/hapi-test-utils.git",
   "author": "Nicklas Laine Overgaard <nicklas@skarp.dk>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.19.0",
+    "eslint-plugin-node": "^6.0.1",
+    "hapi": "^17.2.3",
+    "jest": "^22.4.2",
+    "unexpected": "^10.37.2"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint src/"
+  },
+  "engines": {
+    "node": ">= 8.9"
+  }
 }
