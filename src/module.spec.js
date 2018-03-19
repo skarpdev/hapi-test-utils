@@ -14,4 +14,19 @@ describe('hapi-test-utils', () => {
       );
     });
   });
+
+  describe('auth', () => {
+    it('exports object', () => {
+      uexpect(
+        lib.auth,
+        'to exhaustively satisfy', {
+          fakeAuthScheme: {
+            register: uexpect.it('to be a function'),
+            version: uexpect.it('to be a string'),
+            name: uexpect.it('to be a string'),
+          }
+        }
+      );
+    })
+  });
 })
