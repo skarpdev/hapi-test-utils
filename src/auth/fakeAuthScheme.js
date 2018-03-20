@@ -1,12 +1,8 @@
 const path = require('path');
 const Hoek = require('hoek');
 const { version } = require(path.join('..', '..', 'package.json'));
-const internals = {};
 
-const register = async (plugin) => {
-  plugin.auth.scheme('fake', internals.implementation);
-};
-internals.implementation = function (server, options) {
+const fakeAuthScheme = (server, options) => {
 
   Hoek.assert(options, 'Missing fake auth strategy options');
   Hoek.assert(typeof options.credentialsFn === 'function', 'options.credentialsFn must be a valid function in fake scheme');
@@ -20,6 +16,10 @@ internals.implementation = function (server, options) {
   };
 
   return scheme;
+};
+
+const register = async (plugin) => {
+  plugin.auth.scheme('fake', fakeAuthScheme);
 };
 
 module.exports = {
