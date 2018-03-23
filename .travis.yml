@@ -10,3 +10,11 @@ before_script:
 script:
 - yarn lint
 - yarn test
+deploy:
+  provider: npm
+  email: nicklas@skarp.dk
+  api_key:
+    secure: f0DkU40Uh1Ww89AJmVRkUSx/xPzakuMlGrsjb379jb871h2/alhmU1xvXC2O3iUZOQ9H1+FZnoN6q1gswn4tRiEUd2GNw3jiwrMSVe8avfQjsscRJ/+RyzmEXpOIji6TyOPYzD1VfKw/X6Rjvxo1VLPyqRDgFUqAw8mBK79+i/SUveQ16UvHG8XUGlul05X5tEKLQOvij/3EXBuSxHXK0kP7tEW4p3lyrz/Zh8VsKJ3shh6SL/BigiszN1UJ+TQWw+ALFK62Ap+uqbWEiXuo1wfQakGZJuVEOi9/KmEd+RkLc5Oim7RYqhn470Of3k4V3ZXKbCAGY8aa/uYc8IZbTcfYvGm6I/jHN2+R5tHbMaPeXEJ1rCuK5q1CGzJ3EJrkJJ/tg9XB6avCRl3OAGPaxsDJ1iG9iBH/47hkAM9wP3BONXzpuF0KYA+6lCAZE1LRu6Vs12n6eNFs0CBgTxjpfCsOKRQGdogCluXtK2ZCvP5KIb6yNZe35AJ2GsKYrOy+zZShCMZiwL7e5LNbByULfhtS7jux+7DSkyUv/c+O+Gc0A6LW69PK/zW0dt1JWOo7SY5VbhrP8tfA+SYgGqZ5dTRHL5480drSaikZNmWmu39KJL2nzDY9/SUTwCPtgV1wzdXp/P9MEflp2OSKk5NfJweAFK92xqOB7WPaS4zQeAg=
+  on:
+    tags: true
+    repo: skarpdev/hapi-test-utils
