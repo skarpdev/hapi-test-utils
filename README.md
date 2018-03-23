@@ -1,6 +1,6 @@
 # hapi-test-utils
 
-This package provides common helpers for testing hapijs code.
+This package provides common helpers for testing [hapijs](https://hapijs.com/) code.
 It is currently compatible with hapi v17 and therefore also only works on nodejs 8.
 
 Install the module as a dev dependency
@@ -9,7 +9,7 @@ Install the module as a dev dependency
 yarn add --dev hapi-test-utils # or npm install --save-dev hapi-test-utils
 ```
 
-The package exports and object with "namespaces" for the various test functionality, which will be covered below
+The package exports an object with "namespaces" for the various test functionality, which will be covered below
 ## Routes
 
 The `routing` namespace currently contains one helper for testing whether routes have been registered. Imagine some code like this
@@ -42,7 +42,7 @@ describe('hello api', () => {
 
 ## Auth
 
-Often you develop apis that are either fully protected or partially protected with authentication and authorization, e.g like this:
+Often you develop apis that are either fully or partially protected with authentication and authorization, e.g like this:
 
 ```js
 const Hapi = require('hapi');
