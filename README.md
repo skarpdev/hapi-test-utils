@@ -1,6 +1,6 @@
 # hapi-test-utils
 
-This package provides common helpers for testing [hapijs](https://hapijs.com/) code.
+This package provides common helpers for testing API(unit test)[hapijs](https://hapijs.com/) code.
 It is currently compatible with hapi v17 and therefore also only works on nodejs 8.
 
 Install the module as a dev dependency
@@ -10,9 +10,10 @@ yarn add --dev hapi-test-utils # or npm install --save-dev hapi-test-utils
 ```
 
 The package exports an object with "namespaces" for the various test functionality, which will be covered below
+
 ## Routes
 
-The `routing` namespace currently contains one helper for testing whether routes have been registered. Imagine some code like this
+Imagine some code like this.We want to test `/hello` route with hapi-test-utils module
 
 ```js
 const Hapi = require('hapi');
@@ -26,10 +27,11 @@ server.route({
 });
 ```
 
+The `routing` namespace currently contains one helper for testing whether routes have been registered.
 One can of course test that the hapi server responds with hello, however, the `hasRoute` helper from this library can help you test whether your routes / plugin have been registered in hapi according to specification:
 
 ```js
-const { hasRoute } = require('hapi-test-util').routing;
+const { hasRoute } = require('hapi-test-utils').routing;
 
 // Test in jest format
 describe('hello api', () => {
@@ -39,6 +41,8 @@ describe('hello api', () => {
     });
 });
 ```
+
+add `mocha` to run the test.
 
 ## Auth
 
